@@ -1,0 +1,6 @@
+/.terraform
+/ansible
+/.terraform*
+/backend.tf
+/*auto.tfvars
+
