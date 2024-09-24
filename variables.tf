@@ -12,7 +12,13 @@ variable "prefix" {
 variable "volume_size" {
   description = "Disk space"
   type        = number
-  default = 100
+  default = 500
+}
+
+variable "volume_size_attached" {
+  description = "Disk space for attached disk"
+  type        = number
+  default = 10
 }
 
 variable "aws_profile" {

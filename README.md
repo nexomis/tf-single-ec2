@@ -6,7 +6,13 @@ This project sets up a simple AWS environment using Terraform, creating a VPC wi
 
 - [Terraform](https://www.terraform.io/downloads.html) installed
 - AWS CLI installed and configured with the appropriate profile
-- Ansible installed
+
+> Note that you'll need the AWS CLI version 2
+
+```
+aws configure sso
+```
+
 
 ## Configuration
 
@@ -81,5 +87,4 @@ terraform destroy
 Type `yes` to confirm the destroy.
 
 This README provides a step-by-step guide to setting up and deploying the infrastructure using Terraform. Adjust variable values and configurations as needed for your specific use case.
-
 
