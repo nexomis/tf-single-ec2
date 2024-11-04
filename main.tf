@@ -20,10 +20,12 @@ module "network" {
 }
 
 module "compute_ec2" {
-  source = "github.com/nexomis/tf_tk//modules/single_ec2?ref=v1.0.14"
+  source = "github.com/nexomis/tf_tk//modules/single_ec2?ref=v1.0.15"
   instance_ami = "ami-0cdfcb9783eb43c45"
   instance_type = "${var.instance_type}"
   volume_size = var.volume_size
+  volume_iops = 8000
+  volume_throughput = 1000
   name  = "${var.prefix}-compute"
   subnet_id = module.network.public_subnet_ids[0]
   security_group_id = module.network.security_group_ids["${var.prefix}-sg_compute"]
